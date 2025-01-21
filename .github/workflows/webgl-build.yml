@@ -42,4 +42,11 @@ jobs:
       - name: Build Project
         run: npm run build --prefix ./Demo/ &
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3   
+        with:
+           name: 'github-pages'
+           path: build
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with: 
+          artifact_name: 'github-pages'
