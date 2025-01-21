@@ -26,14 +26,14 @@ import "./App.css";
 
   const loadingPercentage = Math.round(loadingProgression * 100);
 
-  const handleGoogleSignIn = useCallback((...parameters: ReactUnityEventParameter[]): ReactUnityEventParameter => {
-    const googleClientId = parameters[0] as string;
-    const nonce = parameters[1] as string;
-    setGoogleClientId(googleClientId);
-    setNonce(nonce);
-    setShowLogin(true);
-    return '';
-  }, []);
+    const handleGoogleSignIn = useCallback((...parameters: ReactUnityEventParameter[]): ReactUnityEventParameter => {
+      const googleClientId = parameters[0] as string;
+      const nonce = parameters[1] as string;
+      setGoogleClientId(googleClientId);
+      setNonce(nonce);
+      setShowLogin(true);
+      return '';
+    }, []);
 
   const [googleClientIdState, setGoogleClientId] = useState("");
   const [nonce, setNonce] = useState("");
