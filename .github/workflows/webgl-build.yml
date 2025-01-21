@@ -40,11 +40,6 @@ jobs:
       - name: Install Dependencies
         run: npm install --prefix ./Demo/
       - name: Build Project
-        run: npm run build --prefix ./Demo/
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./Demo/
-          destination: ./_site
-      - name: Upload artifact
+        run: npm run build --prefix ./Demo/ &
+      - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
