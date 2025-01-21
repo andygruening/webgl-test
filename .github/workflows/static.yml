@@ -42,7 +42,7 @@ jobs:
       - name: Build the React app
         run: npm run build --prefix ./Demo/
       - name: Move Build Files
-        run: ls ./Demo/ && cp -r ./Demo/Build/* ./Demo/dist/Build
+        run: ls ./Demo/ && mkdir ./Demo/dist/Build && cp -r ./Demo/Build/* ./Demo/dist/Build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
