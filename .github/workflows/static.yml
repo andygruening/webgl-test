@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefix ./Demo/
       - name: Build the React app
-        run: npm run dev --prefix ./Demo/
+        run: npm run build --prefix ./Demo/
       - name: Move Build Files
         run: cp -r ./Demo/Build/* ./Demo/dist/Build
       - name: Upload artifact
