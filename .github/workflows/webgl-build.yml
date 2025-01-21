@@ -34,10 +34,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Install npm dependencies
+      - name: Install Dependencies
         run: npm install --prefix ./Demo/
-      - name: Run development server
-        run: npm run dev --prefix ./Demo/
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
@@ -56,4 +54,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        run: npm run build
